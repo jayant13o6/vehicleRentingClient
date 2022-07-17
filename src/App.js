@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useRoutes, BrowserRouter } from "react-router-dom";
+import Home from "./component/Home";
+import NumberOfWheels from "./component/NumberOfWheels";
+import VehicleType from "./component/VehicleType";
+import VehicleModel from "./component/VehicleModel";
+
+const AddRoute = () => {
+  let routes = useRoutes([
+    { path: "/", element: <Home /> },
+    { path: "/numberOfWheels", element: <NumberOfWheels /> },
+    { path: "/numberOfWheels/:id", element: <VehicleType /> },
+    { path: "/VehicleModel/:id", element: <VehicleModel /> },
+  ]);
+  return routes;
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <AddRoute />
+      </BrowserRouter>
     </div>
   );
 }

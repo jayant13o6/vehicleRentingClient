@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.formControl{
+  margin: 25px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.textField{
+  margin-bottom: 10px;
+}
